@@ -1,0 +1,96 @@
+# =============== #
+# Unity generated #
+# =============== #
+/New Unity Project/
+/ChessAR/[Ll]ibrary/
+/ChessAR/[Tt]emp/
+/ChessAR/[Oo]bj/
+/ChessAR/[Bb]uild/
+/ChessAR/[Bb]uilds/
+/ChessAR/[Ll]ogs/
+!/ChessAR/[Aa]ssets/**/*.meta
+/ChessAR/Assets/AssetStoreTools*
+/ChessAR/UnityPackageManager
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+/AnotherRunner/.consulo/
+/AnotherRunner/.vs/
+/AnotherRunner/ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+*.tmp
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.vscode
+
+# ====================== #
+# Gradle cache directory #
+# ====================== #
+/ChessAR/.gradle/
+
+# ============================= #
+# Unity3D generated meta files  #
+# ============================= #
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# ======================================== #
+# Unity3D generated file on crash reports  #
+# ======================================== #
+sysinfo.txt
+*.stackdump
+
+# ======================================== #
+# Crashlytics generated file               #
+# ======================================== #
+crashlytics-build.properties
+
+# ==================== #
+# Builds               #
+# ==================== #
+*.apk
+*.unitypackage
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
+
+# =============== #
+#      Other      #
+# =============== #
+*.blend1
+*.orig
+*.orig.meta
+*.blend1.meta
+
+# =============== #
+#    Whiteboard   #
+# =============== #
+ChessAR.rar
+ChessAR.7z
+
+
+# =============== #
+#       Rider	  #
+# =============== #
+/ChessAR/.idea/

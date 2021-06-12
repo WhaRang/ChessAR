@@ -16,5 +16,6 @@ public class SignalInstaller : MonoInstaller
         Container.DeclareSignal<CastlingSignal>().OptionalSubscriber();
         Container.DeclareSignal<EnPassantSignal>().OptionalSubscriber();
         Container.DeclareSignal<PromotionSignal>().OptionalSubscriber();
+        Container.DeclareSignal<FinalizeGameSignal>().OptionalSubscriber();
     }
 }

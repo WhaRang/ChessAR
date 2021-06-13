@@ -34,7 +34,7 @@ public class GameFinalizer : IGameFinalizer, IInitializable, IDisposable
     {
         if (Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene(SceneIndexes.MENU.ToString());
+            SceneManager.LoadScene((int)SceneIndexes.MENU);
         }
     }
 

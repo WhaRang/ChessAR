@@ -105,6 +105,12 @@ public class PlayerMoveManager : IPlayerMoveManager, IInitializable, IDisposable
 
         //TODO
         stateMachine.CreateNewState<EnemyMoveState>();
+
+        //GameFinal test
+        signalSystem.FireSignal(new FinalizeGameSignal()
+        {
+            isWhiteWin = true
+        });
     }
 
 

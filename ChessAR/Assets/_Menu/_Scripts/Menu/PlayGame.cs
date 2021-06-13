@@ -18,7 +18,7 @@ public class PlayGame : MonoBehaviour
 		PlayThisGame();
 	}
     public void PlayThisGame(){
-		SceneManager.LoadScene(SceneIndexes.GAME.ToString());
+		SceneManager.LoadScene((int)SceneIndexes.GAME);
 	}
    
 }

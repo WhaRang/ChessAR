@@ -33,7 +33,7 @@ public class StartState : BaseState
         figureAccessor.SetAllBlackFiguresCollidersActive(false);
         figureAccessor.SetAllWhiteFiguresCollidersActive(false);
 
-        if (playerSettings.IsPlayerStartsGame)
+        if (playerSettings.IsPlayerStartsGame || playerSettings.CurrentPlayMode == PlayMode.PLAYER_VS_PLAYER)
         {
             StartGame();
         }

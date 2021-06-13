@@ -103,14 +103,7 @@ public class PlayerMoveManager : IPlayerMoveManager, IInitializable, IDisposable
         figureData.SetFirstIndex(allowedPositions[index][0]);
         figureData.SetSecondIndex(allowedPositions[index][1]);
 
-        //TODO
         stateMachine.CreateNewState<EnemyMoveState>();
-
-        //GameFinal test
-        signalSystem.FireSignal(new FinalizeGameSignal()
-        {
-            isWhiteWin = true
-        });
     }
 
 

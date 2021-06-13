@@ -18,7 +18,7 @@ public class BoardAccessor : MonoBehaviour, IBoardAccessor
     [Inject] private readonly IMaterialAccessor materialAccessor = null;
     [Inject] private readonly IChessMoveLogic chessMoveLogic = null;
     [Inject] private readonly PlayerSettingsSO playerSettings = null;
-   
+
 
     public MeshRenderer[][] AllSquares { get; private set; }
 
@@ -27,6 +27,7 @@ public class BoardAccessor : MonoBehaviour, IBoardAccessor
     {
         signalSystem.SubscribeSignal<FigureSelectedSignal>(HighlightAllSqaures);
         signalSystem.SubscribeSignal<FigureDeselectedSignal>(MakeAllSquaresInvisible);
+        signalSystem.SubscribeSignal<KingWasAttackedSignal>(HilightAttackedKing);
     }
 
 
@@ -34,6 +35,7 @@ public class BoardAccessor : MonoBehaviour, IBoardAccessor
     {
         signalSystem.UnSubscribeSignal<FigureSelectedSignal>(HighlightAllSqaures);
         signalSystem.UnSubscribeSignal<FigureDeselectedSignal>(MakeAllSquaresInvisible);
+        signalSystem.UnSubscribeSignal<KingWasAttackedSignal>(HilightAttackedKing);
     }
 
 
@@ -56,7 +58,7 @@ public class BoardAccessor : MonoBehaviour, IBoardAccessor
         List<Transform> _highlightedSquares = new List<Transform>();
         List<List<int>> _allowedPositions = new List<List<int>>();
         List<List<bool>> allAvailableMoves = chessMoveLogic.GetAllMoves(
-            new List<int>{ signal.figureData.GetFirstIndex(), signal.figureData.GetSecondIndex() },
+            new List<int> { signal.figureData.GetFirstIndex(), signal.figureData.GetSecondIndex() },
             !playerSettings.IsPlayerStartsGame);
         for (int i = 0; i < 8; i++)
         {
@@ -66,7 +68,7 @@ public class BoardAccessor : MonoBehaviour, IBoardAccessor
                 {
                     AllSquares[i][j].material = materialAccessor.GetByIndex(MaterialIndex.BOARD_HIGHLIGHTED);
                     _highlightedSquares.Add(AllSquares[i][j].GetComponent<Transform>());
-                    List<int> allowedPosition = new List<int>(){ i, j };
+                    List<int> allowedPosition = new List<int>() { i, j };
                     _allowedPositions.Add(allowedPosition);
                 }
             }
@@ -89,5 +91,18 @@ public class BoardAccessor : MonoBehaviour, IBoardAccessor
                 AllSquares[i][j].material = materialAccessor.GetByIndex(MaterialIndex.BOARD_EMPTY);
             }
         }
+    }
+
+
+    private void HilightAttackedKing(KingWasAttackedSignal signal)
+    {
+        for (int i = 0; i < signal.attackersCords.Count; i += 2)
+        {
+            AllSquares[signal.attackersCords[i]][signal.attackersCords[i + 1]].material
+                = materialAccessor.GetByIndex(MaterialIndex.BOARD_ATTACKED);
+        }
+
+        AllSquares[signal.attackedKingIndexX][signal.attackedKingIndexY].material
+            = materialAccessor.GetByIndex(MaterialIndex.BOARD_ATTACKED);
     }
 }

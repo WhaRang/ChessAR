@@ -1,5 +1,7 @@
 using System;
 using Zenject;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class GameFinalizer : IGameFinalizer, IInitializable, IDisposable
@@ -25,6 +27,15 @@ public class GameFinalizer : IGameFinalizer, IInitializable, IDisposable
     public void Dispose()
     {
         signalSystem.UnSubscribeSignal<FinalizeGameSignal>(FinalizeGame);
+    }
+
+
+    public void UpdateFinalizer()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            SceneManager.LoadScene(SceneIndexes.MENU.ToString());
+        }
     }
 
 

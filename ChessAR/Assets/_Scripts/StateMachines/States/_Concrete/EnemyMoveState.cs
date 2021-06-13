@@ -22,8 +22,7 @@ public class EnemyMoveState : BaseState
 
     public override void InitializeState()
     {
-        //TODO
-        if (playerSettings.CurrentPlayMode == PlayMode.AI_VS_PLAYER)
+        if (playerSettings.CurrentPlayMode == PlayMode.PLAYER_VS_PLAYER)
         {
             playerSettings.IsPlayerStartsGame = !playerSettings.IsPlayerStartsGame;
             stateMachine.CreateNewState<PlayerMoveState>();

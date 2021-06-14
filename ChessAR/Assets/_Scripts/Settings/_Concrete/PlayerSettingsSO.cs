@@ -15,7 +15,14 @@ public class PlayerSettingsSO : ScriptableObject
     public bool IsArEnbled => isArEnabled;
     public float FigureMoveAnimationTime => figureMoveAnimationTime;
     public float BoardRotationAnimationTime => boardRoatationAnimationTime;
-    public PlayMode CurrentPlayMode => currentPlayMode;
+    public PlayMode CurrentPlayMode
+    { 
+        get => currentPlayMode;
+        set
+        {
+            currentPlayMode = value;
+        }
+    }
 
     public bool IsPlayerStartsGame {
         get => isPlayerStartsGame;

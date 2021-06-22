@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerSettings
   m_EditorClassIdentifier: 
   isPlayerStartsGame: 1
-  isArEnabled: 0
+  isArEnabled: 1
   isAnimationEnabled: 1
   aiDepth: 2
   figureMoveAnimationTime: 0.5

@@ -1295,7 +1295,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1e-45}
+  m_BoundingSphereOverride: {x: 0, y: -0.00000029875082, z: 4.5905e-41, w: 0.000000001037006}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2607,6 +2607,16 @@ PrefabInstance:
       propertyPath: camerasAccessor
       value: 
       objectReference: {fileID: 6558380136875157715}
+    - target: {fileID: 1014718196872550991, guid: 7a7b629ef4917544a816b81e3ea96f4b,
+        type: 3}
+      propertyPath: _monoInstallers.Array.size
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014718196872550991, guid: 7a7b629ef4917544a816b81e3ea96f4b,
+        type: 3}
+      propertyPath: _monoInstallers.Array.data[16]
+      value: 
+      objectReference: {fileID: 1014718195281599344}
     - target: {fileID: 1014718196872551024, guid: 7a7b629ef4917544a816b81e3ea96f4b,
         type: 3}
       propertyPath: m_RootOrder
@@ -2687,8 +2697,25 @@ PrefabInstance:
       propertyPath: _boardAccessor
       value: 
       objectReference: {fileID: 1118986811}
+    - target: {fileID: 6096204841298093995, guid: 7a7b629ef4917544a816b81e3ea96f4b,
+        type: 3}
+      propertyPath: defaultTrackableEventHandler
+      value: 
+      objectReference: {fileID: 40281258}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a7b629ef4917544a816b81e3ea96f4b, type: 3}
+--- !u!114 &1014718195281599344 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6096204841298093995, guid: 7a7b629ef4917544a816b81e3ea96f4b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1014718195281599343}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2196a1395b85f0642be35dd194dfba0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1943168656147209665
 PrefabInstance:
   m_ObjectHideFlags: 0

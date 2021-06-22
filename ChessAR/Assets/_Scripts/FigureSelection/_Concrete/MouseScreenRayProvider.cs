@@ -18,10 +18,6 @@ public class MouseScreenRayProvider : IRayProvider
 
     public Ray CreateRay()
     {
-        /*return playerSettings.IsArEnbled ?
-            camerasAccessor.DefaultCamera.ScreenPointToRay(Input.mousePosition) :
-            camerasAccessor.ARcamera.ScreenPointToRay(Input.mousePosition);*/
-
         return Camera.main.ScreenPointToRay(Input.mousePosition);
     }
 }

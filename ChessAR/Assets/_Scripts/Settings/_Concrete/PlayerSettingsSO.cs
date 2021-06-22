@@ -12,7 +12,6 @@ public class PlayerSettingsSO : ScriptableObject
     [SerializeField] private float boardRoatationAnimationTime = 3.0f;
     [SerializeField] private PlayMode currentPlayMode;
 
-    public bool IsArEnbled => isArEnabled;
     public float FigureMoveAnimationTime => figureMoveAnimationTime;
     public float BoardRotationAnimationTime => boardRoatationAnimationTime;
     public PlayMode CurrentPlayMode
@@ -31,6 +30,16 @@ public class PlayerSettingsSO : ScriptableObject
             isPlayerStartsGame = value;
         }
     }
+
+    public bool IsArEnbled
+    {
+        get => isArEnabled;
+        set
+        {
+            isArEnabled = value;
+        }
+    }
+
 
     public bool IsAnimationEnabled
     {

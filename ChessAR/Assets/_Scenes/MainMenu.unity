@@ -2295,7 +2295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ded4a5b94dfc2a448a34c558371dda1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isArEnabledToggle: {fileID: 0}
+  isArEnabledToggle: {fileID: 1369543373}
   isAnimationEnabledToggle: {fileID: 1757118225}
   difficultyLevelSlider: {fileID: 2118909772}
 --- !u!1 &685803885

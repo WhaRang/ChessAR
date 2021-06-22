@@ -2295,6 +2295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ded4a5b94dfc2a448a34c558371dda1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isArEnabledToggle: {fileID: 0}
   isAnimationEnabledToggle: {fileID: 1757118225}
   difficultyLevelSlider: {fileID: 2118909772}
 --- !u!1 &685803885
@@ -4292,7 +4293,7 @@ GameObject:
   - component: {fileID: 1369543372}
   - component: {fileID: 1369543373}
   m_Layer: 5
-  m_Name: EnableARToggle
+  m_Name: EnableArToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4365,7 +4366,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 680710774}
+        m_TargetAssemblyTypeName: SettingsValuesChanger, Assembly-CSharp
+        m_MethodName: ToggleAR
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &1386772955
 GameObject:
@@ -5824,7 +5837,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 680710774}
         m_TargetAssemblyTypeName: SettingsValuesChanger, Assembly-CSharp
-        m_MethodName: EnableAnimations
+        m_MethodName: ToggleAnimations
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

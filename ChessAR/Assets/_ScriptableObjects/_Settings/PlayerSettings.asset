@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e9f14fb55f4f345b686b84aa139138, type: 3}
   m_Name: PlayerSettings
   m_EditorClassIdentifier: 
-  isPlayerStartsGame: 1
-  isArEnabled: 1
+  isPlayerStartsGame: 0
+  isArEnabled: 0
   isAnimationEnabled: 1
   aiDepth: 2
   figureMoveAnimationTime: 0.5
